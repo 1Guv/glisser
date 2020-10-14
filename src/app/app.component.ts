@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserPost } from 'src/_models/user-post.model';
+import { DataService } from 'src/_services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'glisser-test';
+  userPosts: Array<UserPost>;
+
+  constructor(private dataService: DataService) {
+    this.dataService.getPosts()
+      .subscribe(data => {
+        this.userPosts = data;
+      });
+  }
 }

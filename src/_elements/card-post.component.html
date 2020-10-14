@@ -1,0 +1,16 @@
+<mat-card id="card-post" class="mx-5 mat-elevation-z5">
+    <mat-card-title class="d-flex align-items-center py-3">
+        <div *ngIf="!profileImage">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+
+        <div *ngIf="profileImage">{{profileImage}}</div>
+
+        <div class="name" (click)="editName()">{{firstName}} {{lastName}}</div>
+    </mat-card-title>
+
+    <mat-card-content>
+        <h5>My bio</h5>
+        <div class="pb-5 bio" (click)="editBio()">{{bio}}</div>
+    </mat-card-content>
+</mat-card>

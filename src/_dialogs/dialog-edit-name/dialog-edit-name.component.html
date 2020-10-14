@@ -1,0 +1,26 @@
+<div class="d-flex flex-column">
+    <header class="d-flex">
+        <h4>Edit your details</h4>
+        <button mat-dialog-close class="ml-auto close-button">
+            <mat-icon>close</mat-icon>
+        </button>
+    </header>
+
+    <form [formGroup]="nameForm">
+        <div formGroupName="nameFormDetails" class="d-flex flex-column">
+            <mat-form-field appearance="fill">
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="fname" value="{{firstName}}">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Last name</mat-label>
+                <input matInput formControlName="lname" value="{{lastName}}">
+            </mat-form-field>
+        </div>
+    </form>
+
+    <footer mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close class="px-5 py-2 ok-button" (click)="saveName()">OK</button>
+    </footer>
+</div>

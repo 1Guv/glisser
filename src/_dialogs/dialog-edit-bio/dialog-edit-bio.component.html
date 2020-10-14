@@ -1,0 +1,21 @@
+<div id="dialog-edit-bio" class="d-flex flex-column">
+    <header class="d-flex">
+        <h4>Edit your bio</h4>
+        <button mat-dialog-close class="ml-auto close-button">
+            <mat-icon>close</mat-icon>
+        </button>
+    </header>
+
+    <form [formGroup]="bioForm">
+        <div formGroupName="bioFormDetails" class="d-flex flex-column">
+            <mat-form-field appearance="fill">
+                <mat-label>Bio</mat-label>
+                <textarea rows="10" matInput formControlName="bio" value="{{bio}}"></textarea>
+            </mat-form-field>
+        </div>
+    </form>
+
+    <footer mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close class="px-5 py-2 ok-button" (click)="saveBio()">OK</button>
+    </footer>
+</div>

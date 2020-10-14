@@ -1,0 +1,13 @@
+#card-post {
+    background-color: #464650;
+    color: white;
+
+    mat-icon {
+        margin-right: 70px;
+        font-size: 75px;
+    }
+
+    .name, .bio {
+        cursor: pointer;
+    }
+}

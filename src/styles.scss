@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button {
+    outline: none !important;
+    border: none !important;
+}
+
+.custom-dialog {
+    mat-dialog-container {
+        background-color: #616370;
+        color: white;
+
+        .mat-form-field-appearance-fill .mat-form-field-flex, .ok-button  {
+            background-color: #4e4e5a !important;
+        }
+
+        .close-button {
+            background-color: #616370;
+            color: white;
+            margin-top: -40px;
+            margin-right: -20px;
+        }
+
+        .ok-button {
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
