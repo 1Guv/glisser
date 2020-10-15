@@ -35,14 +35,6 @@ export class DialogEditNameComponent implements OnInit {
       fname: new FormControl(this.firstName, [Validators.required]),
       lname: new FormControl(this.lastName, [Validators.required])
     }));
-
-    this.nameForm.get('nameFormDetails').get('fname').valueChanges.subscribe(value => {
-      this.post.firstName = value;
-    });
-
-    this.nameForm.get('nameFormDetails').get('lname').valueChanges.subscribe(value => {
-      this.post.lastName = value;
-    });
    }
 
   ngOnInit() {}

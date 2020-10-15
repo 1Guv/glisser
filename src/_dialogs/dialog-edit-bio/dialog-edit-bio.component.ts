@@ -32,10 +32,6 @@ export class DialogEditBioComponent implements OnInit {
     this.bioForm.addControl('bioFormDetails', new FormGroup({
       bio: new FormControl(this.bio, [Validators.required]),
     }));
-
-    this.bioForm.get('bioFormDetails').get('bio').valueChanges.subscribe(value => {
-      this.post.bio = value;
-    });
    }
 
   ngOnInit() {

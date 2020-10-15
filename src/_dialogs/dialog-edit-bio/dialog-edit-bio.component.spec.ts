@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MAT_DIALOG_DATA } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { DialogEditBioComponent } from './dialog-edit-bio.component';
 
 describe('DialogEditBioComponent', () => {
@@ -12,7 +11,14 @@ describe('DialogEditBioComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DialogEditBioComponent ],
-      imports: [MatIconModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatDialogModule, MatInputModule, BrowserAnimationsModule],
+      imports: [
+        MatIconModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatInputModule,
+        BrowserAnimationsModule],
       providers: [{
         provide: MAT_DIALOG_DATA,
         useValue: {}
